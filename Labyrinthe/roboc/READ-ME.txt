@@ -1,0 +1,21 @@
+Ce programme vous permet de créer et d'éditer vos propres cartes.
+Pour cela:
+	- Vous devez créer un fichier texte, comme celui-ci
+	- Vous le remplissez avec des 'O', 'U', ' ' (espace) et un 'X' (votre personnage)
+uniquement!!
+	-Votre fichier texte contenant votre labyrinthe doit être placé dans le dossier "carte"
+
+ATTENTION!
+Pour que le labyrinthe fonctionne:
+	-Il doit être clairement délimité: le coeur de votre labyrinthe doit être entouré de
+'O', les murs de vottre labyrinthes
+	-Il ne doit y avoir aucun espace ou autre caractère en-dehors des limites du labyrinthe
+(par exemple, à droite du bord vertical droit, vous ne devez pas avoir un ' ' sinon ça ne 
+marchera pas)
+	-Enfin, vous ne devez pas sauter de ligne à la fin de votre la labyrinthe, on ne doit pas
+pouvoir descendre plus bas que la dernière ligne de 'O'
+
+En clair, si vous sélectionnez l'intérieur de votre fichier avec votre souris, vous ne devez 
+avoir pris QUE le labyrinthe et ses limites.
+
+Pour mieux comprendre, vous pouvez regarder les labyrinthes du dossier "carte".
