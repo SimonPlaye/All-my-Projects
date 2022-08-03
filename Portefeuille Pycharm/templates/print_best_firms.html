@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href= "{{ url_for('static',filename='affichage.css') }}">
+<head>
+    <meta charset="utf-8":>
+    <title>Simon Playe's website</title>
+</head>
+<body>
+<div>
+	<form action="/" method="POST">
+		<label for="choice">Retour à l'accueil</label>
+	<input type="submit" value="Accueil">
+	</form>
+</div>
+<h3>Data for the sector {{Sector}}</h3>
+<p>
+{% block content %}
+	{{data | safe}}
+{% endblock %}
+</p>
+</body>

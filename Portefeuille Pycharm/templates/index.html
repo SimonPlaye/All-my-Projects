@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href= "{{ url_for('static',filename='affichage.css') }}">
+<head>
+	<meta charset="utf-8":>
+	<title>Simon Playe's website</title>
+</head>
+<body>
+	<h1>Welcome on the website of Simon Playe</h3>
+<div>
+	<h3>My resume</h3>
+	<object data="{{ url_for('static', filename='Resume_Simon_Playe.pdf')}}" type="application/pdf" style="min-height:100vh;width:70%;" view=FitH></object>
+</div>
+<br>
+<div>
+	<h3> Projects : </h3>
+	<a href="/projet_bloomberg"> Bloomberg Project</a>
+	<br>
+	<a href="/index_marche_fi"> Simulations marché financier</a>
+</div>
+</body>
+</html>	

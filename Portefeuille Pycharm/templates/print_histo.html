@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href= "{{ url_for('static',filename='affichage.css') }}">
+<head>
+	<meta charset="utf-8":>
+	<title>Simon Playe's website</title>
+</head>
+<body>
+<div>
+	<form action="/projet_bloomberg" method="POST">
+		<label for="choice">Choisir de nouvelles données</label>
+	<input type="submit" value="Retour">
+	</form>
+</div>
+<div>
+    <form action="/" method="POST">
+        <label for="choice">Accueil</label>
+    <input type="submit" value="Retour">
+    </form>
+</div>
+<h1>Secteur : {{name}} Date : {{date}}</h1>
+<h3>Graphiques</h3>
+<img src="{{ image }}"/>
+<br>
+<form action = "/print_best_firms" method="POST">
+<h3>Enter parameters</h3>
+	<label for="pe">PE :</label>
+	<input name = "pe" id="pe">
+	<br>
+	<label for="peg_inf">PEG min:</label>
+	<input name ="peg_inf" id="peg_inf">
+	<br>
+	<label for="pg_sup">PEG max:</label>
+	<input name = "peg_sup" id="peg_sup	">
+	<br>
+	<label for="ebit">EBIT margin :</label>
+	<input name="ebit" id="ebit">
+	<br>
+	<label for="sharpe">Sharpe Ratio :</label>
+	<input name= "sharpe" id="sharpe">
+	<br>
+	<input type="submit" value="Find firms">
+	<br>
+</form>
+<h3>Data of the portfolio for the sector</h3>
+<p class='data'>
+	{% block content %}
+	{{data_sector | safe}}
+</p>
+
+
+<h3>Data for the sector</h3>
+<p class="data">
+{{data | safe}}
+{% endblock %}
+</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href= "{{ url_for('static',filename='affichage.css') }}">
+<head>
+    <meta charset="utf-8":>
+    <title>Simon Playe's website</title>
+</head>
+<body>
+    <h3>Bienvenue sur le projet Bloomberg</h3>
+<div>
+  <form action="/print_histo" method="POST">
+    <label for="date">Date</label>
+    <select name="date">
+	{%for date in Date%}
+		<option value="{{ date}}">{{ date}}</option>
+	{% endfor %}
+    </select>
+    <br>
+    <label for="sector">Sector</label>
+    <select name="sector">
+	{%for sector in Sector%}
+		<option value="{{ sector}}">{{ sector}}</option>
+	{% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<br>
+<h3>Graphique</h3>
+<img src="{{image}}"/>
+<br>
+<form action="/projet_bloomberg" method="POST">
+    <input type="submit" name="submit_button" value="Refresh">
+</form>
+<br>
+<h3>Composition du portefeuille (en Euro)</h3>
+{% block content %}
+{{data | safe}}
+{% endblock %}
+</body>
+</html>

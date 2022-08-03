@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h3>Market Evolution</h3>
+<div>
+  <form action="/print_data" method="POST">
+    <label for="agent">Agents</label>
+    <input type="number" step="10" id="agent" name="agent" min="100" max="5000">
+    <br>
+    <label for="sim">Simulation</label>
+    <input type="number" step="1" id="sim" name="sim" min="1" max="20">
+    <br>
+    <label for="trend">Tendance</label>
+    <select name="trend">
+	{%for trend in tendance%}
+		<option value="{{ trend }}">{{ trend }}</option>
+	{% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <form action="/" method="POST">
+        <label for="choice">Retour à l'accueil</label>
+    <input type="submit" value="Retour">
+    </form>
+</div>
+</body>
+</html>

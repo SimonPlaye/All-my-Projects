@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DASHBOARD</title>
+</head>
+<body>
+
+<div>
+	<form action="/index_marche_fi" method="POST">
+		<label for="choice">Retour en arrière</label>
+	<input type="submit" value="Retour">
+	</form>
+	<br>
+	<form action="/" method="POST">
+		<label for="choice">Retour à l'accueil</label>
+	<input type="submit" value="Retour">
+	</form>
+</div>
+<h3>Graphiques</h3>
+<img src="{{ image }}"/>
+<img src="{{ image2 }}"/>
+
+<h3>Data Frames</h3>
+<p>
+{% block content %}
+	{{data | safe}}
+</p>
+<p>
+	{{data_bis | safe}}
+{% endblock %}
+<label> NB : il s'agit du plus faible max Drawdown </label>
+</p>
+
+</body>
+</html>
